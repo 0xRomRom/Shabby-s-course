@@ -17,10 +17,19 @@
   visibility: hidden;
 }
 
+.center-box {
+  position: relative;
+  display: flex;
+  height: 42rem;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+
 .img-container {
   display: flex;
   justify-content: center;
-
   min-height: 13rem;
 }
 
@@ -36,7 +45,7 @@
   justify-content: center;
   align-items: flex-start;
   gap: 3rem;
-  position: absolute;
+  /* position: absolute; */
   height: 40rem;
   width: 100vw;
 }
@@ -99,12 +108,11 @@
 }
 
 .button-container {
-  position: absolute;
+  /* position: absolute; */
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 3rem;
-  /* background: red; */
   width: 60vw;
   height: 10rem;
   left: 35rem;
@@ -115,10 +123,12 @@
   border-radius: 1rem;
   height: 50%;
   padding: 0px 2rem;
+  margin-left: 12rem;
   font-family: "Press Start 2P", sans-serif;
-  font-size: 1.5vw;
-  color: rgb(19, 19, 19);
+  font-size: 1.2vw;
+  color: black;
   background-color: white;
+  font-weight: 800;
 }
 
 .no {
@@ -126,8 +136,10 @@
   height: 50%;
   padding: 0px 2rem;
   font-family: "Press Start 2P", sans-serif;
-  font-size: 1.5vw;
+  font-size: 1.2vw;
   background-color: white;
+  font-weight: 800;
+  color: black;
 }
 
 .no-href {
@@ -136,11 +148,13 @@
 }
 
 .go:hover {
-  background-color: rgb(205, 200, 200);
+  background-color: rgb(0, 0, 0);
   cursor: pointer;
+  color: white;
 }
 
 .no:hover {
-  background-color: rgb(205, 200, 200);
+  color: white;
+  background-color: black;
   cursor: pointer;
 }
