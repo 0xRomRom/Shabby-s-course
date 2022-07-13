@@ -28,7 +28,6 @@
   position: relative;
   width: 90vw;
   max-height: 20rem;
-  z-index: 20;
 }
 
 .shabby-container {
@@ -40,7 +39,6 @@
   position: absolute;
   height: 40rem;
   width: 100vw;
-  z-index: 20;
 }
 
 .shabby {
@@ -48,7 +46,6 @@
   height: 50%;
   border-radius: 10rem;
   animation: fadeIn 3s ease-in forwards;
-  z-index: 20;
 }
 
 @keyframes fadeIn {
@@ -75,7 +72,6 @@
   border-radius: 3rem;
   gap: 3rem;
   padding: 0px 5rem;
-  z-index: 20;
 }
 
 .line-fade {
@@ -100,7 +96,6 @@
   display: inline-block;
   font-size: 2vw;
   font-weight: 900;
-  z-index: 20;
 }
 
 .button-container {
@@ -114,7 +109,6 @@
   height: 10rem;
   left: 35rem;
   top: 50rem;
-  z-index: 30;
 }
 
 .go {
@@ -123,6 +117,7 @@
   padding: 0px 2rem;
   font-family: "Press Start 2P", sans-serif;
   font-size: 1.5vw;
+  color: rgb(19, 19, 19);
   background-color: white;
 }
 
@@ -132,6 +127,12 @@
   padding: 0px 2rem;
   font-family: "Press Start 2P", sans-serif;
   font-size: 1.5vw;
+  background-color: white;
+}
+
+.no-href {
+  color: black;
+  text-decoration: none;
 }
 
 .go:hover {
