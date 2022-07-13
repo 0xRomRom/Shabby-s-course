@@ -11,12 +11,15 @@ setTimeout(() => {
 
 setTimeout(() => {
   line1.classList.remove("hidden");
+  line1.classList.add("line-fade");
 }, 4500);
 
 setTimeout(() => {
   line2.classList.remove("hidden");
+  line2.classList.add("line-fade");
 }, 8500);
 
 setTimeout(() => {
   line3.classList.remove("hidden");
-}, 11500);
+  line3.classList.add("line-fade");
+}, 13500);
