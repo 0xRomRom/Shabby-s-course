@@ -9,7 +9,7 @@
 .content {
   width: 100%;
   position: absolute;
-  overflow: hidden;
+  overflow: scroll;
   height: 100vh;
   padding: 0px 1rem;
 }
