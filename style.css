@@ -9,8 +9,8 @@
 .content {
   width: 100%;
   position: absolute;
-  overflow: scroll;
-  height: 100vh;
+  overflow: hidden;
+  min-height: 60rem;
   padding: 0px 1rem;
 }
 .hidden {
@@ -71,7 +71,7 @@
 .header-text-box {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
   left: 15rem;
   top: 5rem;
@@ -80,7 +80,7 @@
   border: 3px solid black;
   border-radius: 3rem;
   gap: 3rem;
-  padding: 0px 5rem;
+  padding: 0px 3rem;
 }
 
 .line-fade {
