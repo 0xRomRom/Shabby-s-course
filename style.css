@@ -54,11 +54,14 @@
   left: 10rem;
   height: 50%;
   border-radius: 10rem;
-  animation: fadeIn 3s ease-in forwards;
+  animation: fadeIn 10s ease-in forwards;
 }
 
 @keyframes fadeIn {
   0% {
+    opacity: 0;
+  }
+  70% {
     opacity: 0;
     transform: translateY(-3rem);
   }
@@ -129,6 +132,7 @@
   color: black;
   background-color: white;
   font-weight: 800;
+  border: 3px solid black;
 }
 
 .no {
@@ -140,6 +144,7 @@
   background-color: white;
   font-weight: 800;
   color: black;
+  border: 3px solid black;
 }
 
 .no-href {
@@ -157,4 +162,59 @@
   color: white;
   background-color: black;
   cursor: pointer;
+}
+
+/*Boot Screen */
+
+.bootscreen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  position: absolute;
+  z-index: 5;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(#00ffa3, #03e1ff, #dc1fff, #306a9c);
+}
+
+.progress {
+  position: relative;
+  height: 30px;
+  width: 50vw;
+  border: 10px solid #ff0000;
+  border-radius: 15px;
+}
+.progress .color {
+  position: absolute;
+  background-color: #ffffff;
+  width: 0px;
+  height: 10px;
+  border-radius: 15px;
+  animation: progres 5s ease forwards;
+}
+@keyframes progres {
+  0% {
+    width: 0%;
+  }
+  25% {
+    width: 50%;
+  }
+  50% {
+    width: 75%;
+  }
+  75% {
+    width: 85%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.loadingtext {
+  font-family: "Press Start 2P", sans-serif;
+  display: inline-block;
+  font-size: 2vw;
+  font-weight: 900;
 }
