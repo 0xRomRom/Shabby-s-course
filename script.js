@@ -11,6 +11,7 @@ const bootScreen = document.querySelector(".bootscreen");
 const content = document.querySelector(".content");
 const expectations = document.querySelector(".expectations");
 const goButton = document.querySelector(".go");
+const goText = document.querySelector(".go-text");
 const noButton = document.querySelector(".no");
 
 //Initialize
@@ -50,13 +51,15 @@ initialFunction();
 
 goButton.addEventListener("mouseover", () => {
   shabby.src = "./img/shabby.jpg";
+  goText.style.color = "white";
 });
 goButton.addEventListener("click", () => {
-  expectations.style.display = "initial";
+  expectations.style.display = "flex";
 });
 
 goButton.addEventListener("mouseleave", () => {
   shabby.src = "./img/shabby2.jpg";
+  goText.style.color = "black";
 });
 
 noButton.addEventListener("mouseover", () => {

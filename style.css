@@ -4,6 +4,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 .content {
@@ -234,10 +235,22 @@
 /* Section 2 */
 
 .expectations {
-  /* overflow: scroll; */
   position: absolute;
   top: 65rem;
   width: 100%;
   height: 63rem;
-  background-color: red;
+  /* background-color: red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.go-text {
+  text-decoration: none;
+  color: black;
+  font-family: "Press Start 2P", sans-serif;
+}
+
+#expect {
+  font-family: "Press Start 2P", sans-serif;
 }
