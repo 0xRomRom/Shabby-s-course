@@ -7,9 +7,16 @@
     <link rel="icon" type="image/x-icon" href="./img/icons8-parachute-30.png" />
     <link rel="stylesheet" href="./style.css" type="text/css" />
     <title>Shabby's Crash Course</title>
-    <script async src="./script.js"></script>
+    <script defer src="./script.js"></script>
   </head>
   <body>
+    <div class="bootscreen">
+      <p class="loadingtext">Loading:</p>
+      <div class="progress">
+        <div class="color"></div>
+      </div>
+    </div>
+
     <div class="content">
       <div class="img-container">
         <img
@@ -23,7 +30,7 @@
           <img
             src="./img/shabby.jpg"
             alt="Shabby's Airdrop Slogan"
-            class="shabby"
+            class="shabby hidden"
           />
           <div class="header-text-box hidden">
             <p class="line1 hidden">Are you a beginner, seeking for advice?</p>
@@ -45,11 +52,6 @@
         </div>
       </div>
     </div>
-    <div class="bootscreen">
-      <p class="loadingtext">Loading:</p>
-      <div class="progress">
-        <div class="color"></div>
-      </div>
-    </div>
+    <div class="expectations"></div>
   </body>
 </html>

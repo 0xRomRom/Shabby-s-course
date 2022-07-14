@@ -10,11 +10,15 @@
   width: 100%;
   position: absolute;
   overflow: hidden;
-  min-height: 60rem;
-  padding: 0px 1rem;
+  height: 60rem;
+  /* padding: 0px 0.5rem; */
 }
 .hidden {
   visibility: hidden;
+}
+
+.removed {
+  display: none;
 }
 
 .center-box {
@@ -47,22 +51,25 @@
   gap: 3rem;
   /* position: absolute; */
   height: 40rem;
-  width: 100vw;
+  width: 100%;
 }
 
 .shabby {
   left: 10rem;
   height: 50%;
   border-radius: 10rem;
-  animation: fadeIn 10s ease-in forwards;
   box-shadow: 0px 10px 15px black;
+}
+
+.shabbyfade {
+  animation: fadeIn 6s ease-in forwards;
 }
 
 @keyframes fadeIn {
   0% {
     opacity: 0;
   }
-  70% {
+  50% {
     opacity: 0;
     transform: translateY(-3rem);
   }
@@ -179,7 +186,7 @@
   gap: 2rem;
   position: absolute;
   z-index: 5;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background: linear-gradient(#00ffa3, #03e1ff, #dc1fff, #306a9c);
 }
@@ -222,4 +229,15 @@
   display: inline-block;
   font-size: 2vw;
   font-weight: 900;
+}
+
+/* Section 2 */
+
+.expectations {
+  /* overflow: scroll; */
+  position: absolute;
+  top: 65rem;
+  width: 100%;
+  height: 63rem;
+  background-color: red;
 }
