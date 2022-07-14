@@ -55,6 +55,7 @@
   height: 50%;
   border-radius: 10rem;
   animation: fadeIn 10s ease-in forwards;
+  box-shadow: 0px 10px 15px black;
 }
 
 @keyframes fadeIn {
@@ -84,10 +85,12 @@
   border-radius: 3rem;
   gap: 3rem;
   padding: 0px 3rem;
+  box-shadow: 0px 5px 15px black;
+  /* box-shadow: 5px 5px 10px black; */
 }
 
 .line-fade {
-  animation: lineIn 2s ease-in forwards;
+  animation: lineIn 1.5s ease-in forwards;
 }
 
 @keyframes lineIn {
@@ -133,6 +136,7 @@
   background-color: white;
   font-weight: 800;
   border: 3px solid black;
+  box-shadow: 5px 5px 10px black;
 }
 
 .no {
@@ -145,6 +149,7 @@
   font-weight: 800;
   color: black;
   border: 3px solid black;
+  box-shadow: 5px 5px 10px black;
 }
 
 .no-href {
