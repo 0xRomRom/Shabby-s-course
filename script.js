@@ -53,7 +53,7 @@ goButton.addEventListener("mouseover", () => {
   shabby.src = "./img/shabby.jpg";
   goText.style.color = "white";
 });
-goButton.addEventListener("click", () => {
+goText.addEventListener("click", () => {
   expectations.style.display = "flex";
 });
 
