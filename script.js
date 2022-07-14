@@ -13,6 +13,9 @@ const expectations = document.querySelector(".expectations");
 const goButton = document.querySelector(".go");
 const noButton = document.querySelector(".no");
 
+//Initialize
+expectations.style.display = "none";
+
 //Bootscreen animations
 
 const initialFunction = () => {
@@ -35,7 +38,7 @@ const initialFunction = () => {
     bootScreen.classList.add("hidden");
     content.classList.remove("removed");
     expectations.classList.remove("removed");
-  }, 5000);
+  }, 6000);
   setTimeout(() => {
     shabby.classList.remove("hidden");
     shabby.classList.add("shabbyfade");
@@ -48,6 +51,10 @@ initialFunction();
 goButton.addEventListener("mouseover", () => {
   shabby.src = "./img/shabby.jpg";
 });
+goButton.addEventListener("click", () => {
+  expectations.style.display = "initial";
+});
+
 goButton.addEventListener("mouseleave", () => {
   shabby.src = "./img/shabby2.jpg";
 });
