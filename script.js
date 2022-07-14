@@ -10,6 +10,8 @@ const loadingText = document.querySelector(".loadingtext");
 const bootScreen = document.querySelector(".bootscreen");
 const content = document.querySelector(".content");
 const expectations = document.querySelector(".expectations");
+const goButton = document.querySelector(".go");
+const noButton = document.querySelector(".no");
 
 //Bootscreen animations
 
@@ -41,54 +43,74 @@ const initialFunction = () => {
 };
 initialFunction();
 
-// (function () {
-//   loadingText.insertAdjacentHTML("beforeend", " DeFi");
-//   setTimeout(() => {
-//     loadingText.textContent = "Loading: ";
-//     loadingText.insertAdjacentHTML("beforeend", " Airdrops");
-//     content.classList.add("removed");
-//     expectations.classList.add("removed");
-//   }, 1000);
-//   setTimeout(() => {
-//     loadingText.textContent = "Loading: ";
-//     loadingText.insertAdjacentHTML("beforeend", " Financial Independence");
-//   }, 2000);
-//   setTimeout(() => {
-//     loadingText.textContent = "Loading: ";
-//     loadingText.insertAdjacentHTML("beforeend", " Gateway To Freedom");
-//   }, 4000);
-//   setTimeout(() => {
-//     bootScreen.classList.add("hidden");
-//     content.classList.remove("removed");
-//     expectations.classList.remove("removed");
-//   }, 5000);
-//   setTimeout(() => {
-//     shabby.classList.remove("hidden");
-//     shabby.classList.add("shabbyfade");
-//   }, 4500);
-// })();
-
 //Homescreen animations
+
+goButton.addEventListener("mouseover", () => {
+  shabby.src = "./img/shabby.jpg";
+});
+goButton.addEventListener("mouseleave", () => {
+  shabby.src = "./img/shabby2.jpg";
+});
+
+noButton.addEventListener("mouseover", () => {
+  shabby.src = "./img/shabby3.jpg";
+});
+noButton.addEventListener("mouseleave", () => {
+  shabby.src = "./img/shabby2.jpg";
+});
+
+//
+setTimeout(() => {
+  shabby.src = "./img/shabby.jpg";
+}, 13000);
+
+setTimeout(() => {
+  shabby.src = "./img/shabby2.jpg";
+}, 13100);
+
+setTimeout(() => {
+  shabby.src = "./img/shabby.jpg";
+}, 13200);
+
+setTimeout(() => {
+  shabby.src = "./img/shabby2.jpg";
+}, 13300);
+setTimeout(() => {
+  shabby.src = "./img/shabby.jpg";
+}, 13400);
+
+setTimeout(() => {
+  shabby.src = "./img/shabby2.jpg";
+}, 13500);
+setTimeout(() => {
+  shabby.src = "./img/shabby.jpg";
+}, 13600);
+
+setTimeout(() => {
+  shabby.src = "./img/shabby2.jpg";
+}, 13700);
+
+//
 
 setTimeout(() => {
   textBox.classList.remove("hidden");
-}, 12000);
+}, 15000);
 
 setTimeout(() => {
   line1.classList.remove("hidden");
   line1.classList.add("line-fade");
-}, 14000);
+}, 16500);
 
 setTimeout(() => {
   line2.classList.remove("hidden");
   line2.classList.add("line-fade");
-}, 18500);
+}, 20000);
 
 setTimeout(() => {
   line3.classList.remove("hidden");
   line3.classList.add("line-fade");
-}, 23000);
+}, 24500);
 
 setTimeout(() => {
   buttonBox.classList.remove("hidden");
-}, 26000);
+}, 28000);
