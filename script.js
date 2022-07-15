@@ -15,7 +15,7 @@ const goText = document.querySelector(".go-text");
 const noButton = document.querySelector(".no");
 
 //Initialize
-// expectations.style.display = "none";
+expectations.style.display = "none";
 
 //Bootscreen animations
 
