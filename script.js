@@ -10,12 +10,14 @@ const loadingText = document.querySelector(".loadingtext");
 const bootScreen = document.querySelector(".bootscreen");
 const content = document.querySelector(".content");
 const expectations = document.querySelector(".expectations");
+const instructions = document.querySelector(".instructions");
 const goButton = document.querySelector(".go");
 const goText = document.querySelector(".go-text");
 const noButton = document.querySelector(".no");
 
 //Initialize
-expectations.style.display = "none";
+// expectations.style.display = "none";
+// instructions.style.display = "none";
 
 //Bootscreen animations
 
