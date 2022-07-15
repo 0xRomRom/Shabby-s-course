@@ -446,8 +446,9 @@
   }
 
   .shabby2 {
-    left: -1rem;
-    height: 15%;
+    left: 1rem;
+    top: -10rem;
+    height: 11%;
   }
 }
 
