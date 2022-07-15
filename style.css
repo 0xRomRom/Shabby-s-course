@@ -441,10 +441,12 @@
     height: 56rem;
   }
   .header-text-box2 {
+    margin-top: 17rem;
     height: 40rem;
   }
 
   .shabby2 {
+    left: -1rem;
     height: 15%;
   }
 }
