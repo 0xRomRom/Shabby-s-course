@@ -14,10 +14,11 @@ const instructions = document.querySelector(".instructions");
 const goButton = document.querySelector(".go");
 const goText = document.querySelector(".go-text");
 const noButton = document.querySelector(".no");
+const fingerDown = document.querySelector("fa-hand-point-down");
 
 //Initialize
-// expectations.style.display = "none";
-// instructions.style.display = "none";
+expectations.style.display = "none";
+instructions.style.display = "none";
 
 //Bootscreen animations
 
@@ -57,6 +58,7 @@ goButton.addEventListener("mouseover", () => {
 });
 goText.addEventListener("click", () => {
   expectations.style.display = "flex";
+  instructions.style.display = "initial";
 });
 
 goButton.addEventListener("mouseleave", () => {
@@ -126,3 +128,5 @@ setTimeout(() => {
 setTimeout(() => {
   buttonBox.classList.remove("hidden");
 }, 28000);
+
+fingerDown.addEventListener("click", () => {});
