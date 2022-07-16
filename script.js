@@ -18,6 +18,7 @@ const noButton = document.querySelector(".no");
 const transferSum = document.querySelector(".transfer-sum");
 const transferCurrency = document.querySelector(".transfer-cur");
 const blockchains = document.querySelector("#blockchains");
+const addressBox = document.querySelector("#address-box");
 
 //Initialize
 // expectations.style.display = "none";
@@ -78,24 +79,37 @@ noButton.addEventListener("mouseleave", () => {
 
 blockchains.addEventListener("change", () => {
   switch (blockchains.value) {
+    case "👇":
+      transferSum.textContent = " ";
+      addressBox.value = "Choose Currency";
+      break;
     case "solana":
       transferSum.textContent = "97";
+      addressBox.value = "0x1111111111";
       break;
     case "bitcoin":
       transferSum.textContent = "97";
+      addressBox.value = "0x2222222222";
       break;
     case "ethereum":
       transferSum.textContent = "97";
+      addressBox.value = "0x3333333333";
       break;
     case "bnb":
       transferSum.textContent = "97";
+      addressBox.value = "0x4444444444";
       break;
     case "avax":
       transferSum.textContent = "97";
+      addressBox.value = "0x5555555555";
       break;
     case "tether":
       transferSum.textContent = "97";
+      addressBox.value = "0x6666666666";
       break;
+    default:
+      transferSum.textContent = " ";
+      addressBox.value = "Choose Currency";
   }
 
   copyAddress();
