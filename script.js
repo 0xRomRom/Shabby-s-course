@@ -86,17 +86,17 @@ blockchains.addEventListener("change", () => {
     case "solana":
       renderResult(solanaURL);
       // transferSum.textContent = "97";
-      addressBox.value = "0x1111111111";
+      addressBox.value = "0x3333333333";
       break;
     case "bitcoin":
       renderResult(bitcoinURL);
       transferSum.textContent = "97";
-      addressBox.value = "0x2222222222";
+      addressBox.value = "0x1111111111";
       break;
     case "ethereum":
       renderResult(ethereumURL);
       transferSum.textContent = "97";
-      addressBox.value = "0x3333333333";
+      addressBox.value = "0x2222222222";
       break;
     case "bnb":
       renderResult(BNB_URL);
@@ -106,11 +106,11 @@ blockchains.addEventListener("change", () => {
     case "avax":
       renderResult(AVAX_URL);
       transferSum.textContent = "97";
-      addressBox.value = "0x5555555555";
+      addressBox.value = "0x6666666666";
       break;
     case "tether":
       transferSum.textContent = "97";
-      addressBox.value = "0x6666666666";
+      addressBox.value = "0x5555555555";
       break;
     default:
       transferSum.textContent = " ";
@@ -145,13 +145,11 @@ const renderResult = async function (source) {
     })
     .then((data) => {
       console.log(data[Object.keys(data)[0]].usd);
-
       transferSum.textContent = (
         100 / Math.trunc(data[Object.keys(data)[0]].usd)
       ).toFixed(4);
     });
 };
-// renderResult();
 
 //////////////////
 
