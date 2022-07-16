@@ -11,23 +11,27 @@ const bootScreen = document.querySelector(".bootscreen");
 const content = document.querySelector(".content");
 const expectations = document.querySelector(".expectations");
 const instructions = document.querySelector(".instructions");
+const payForm = document.querySelector(".pay-form");
 const goButton = document.querySelector(".go");
 const goText = document.querySelector(".go-text");
 const noButton = document.querySelector(".no");
 const addyCopied = document.querySelector(".addy-copied");
 const txInput = document.querySelector(".tx-input");
 const emailInput = document.querySelector(".email-input");
-
+const gotHash = document.querySelector(".got-hash");
 const transferSum = document.querySelector(".transfer-sum");
 const transferCurrency = document.querySelector(".transfer-cur");
 const blockchains = document.querySelector("#blockchains");
 const addressBox = document.querySelector("#address-box");
 const formBox = document.querySelector(".form-box");
 const thanksBox = document.querySelector(".thankyou");
+const txError = document.querySelector(".tx-error");
+const emailError = document.querySelector(".email-error");
 
 //Initialize
 expectations.style.display = "none";
 instructions.style.display = "none";
+payForm.style.display = "none";
 
 //Bootscreen animations
 
@@ -68,6 +72,10 @@ goButton.addEventListener("mouseover", () => {
 goText.addEventListener("click", () => {
   expectations.style.display = "flex";
   instructions.style.display = "initial";
+});
+
+gotHash.addEventListener("click", () => {
+  payForm.style.display = "flex";
 });
 
 goButton.addEventListener("mouseleave", () => {
@@ -157,6 +165,27 @@ const renderResult = async function (source, optional) {
 //////////////////
 function submitHandler(event) {
   event.preventDefault();
+  if (emailInput.value.includes("@")) {
+    emailError.classList.add("hidden");
+  }
+  if (txInput.value.length <= 10) {
+    txError.classList.remove("hidden");
+    if (!emailInput.value.includes("@")) {
+      emailError.classList.remove("hidden");
+      return;
+    }
+    return;
+  }
+  txError.classList.add("hidden");
+  emailError.classList.add("hidden");
+  if (!emailInput.value.includes("@")) {
+    emailError.classList.remove("hidden");
+    if (txInput.value.length <= 10) {
+      txError.classList.add("hidden");
+      return;
+    }
+    return;
+  }
 
   const userData = {
     hash: txInput.value,

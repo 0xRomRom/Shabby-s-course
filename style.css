@@ -292,7 +292,7 @@
 #expect {
   visibility: hidden;
   position: absolute;
-  top: 2rem;
+  top: 20rem;
 }
 
 .fa-hand-point-down {
@@ -619,18 +619,18 @@ form {
   color: black;
   font-family: "Press Start 2P", sans-serif;
   padding: 1rem 2rem;
-  width: 70%;
+  min-width: 70%;
 }
 
 .email-input {
   color: black;
   font-family: "Press Start 2P", sans-serif;
   padding: 1rem 2rem;
-  width: 70%;
+  min-width: 70%;
 }
 
 .submit-form-button {
-  width: 40%;
+  min-width: 40%;
   font-size: 1rem;
   color: rgb(0, 0, 0);
   text-align: center;
@@ -686,6 +686,38 @@ form {
   width: 70%;
 }
 
+.confirmation2 {
+  color: white;
+  font-family: "Press Start 2P", sans-serif;
+  padding: 1rem 2rem;
+  width: 70%;
+}
+
+.shabby-originals {
+  color: white;
+  font-family: "Press Start 2P", sans-serif;
+  padding: 1rem 2rem;
+  width: 70%;
+  position: absolute;
+  color: black;
+  bottom: 1rem;
+  text-align: center;
+}
+
+.tx-error {
+  padding-top: 0.5rem;
+  color: red;
+  text-align: center;
+  font-family: "Press Start 2P", sans-serif;
+}
+
+.email-error {
+  padding-top: 0.5rem;
+  color: red;
+  text-align: center;
+  font-family: "Press Start 2P", sans-serif;
+}
+
 /* Media Queries */
 @media screen and (max-width: 1500px) {
   .shabby2 {
@@ -713,6 +745,16 @@ form {
     min-width: 10rem;
     font-size: 1rem;
     display: inline-block;
+  }
+
+  #blockchains {
+    width: 70%;
+    padding: 0;
+  }
+  .chad {
+    width: 40vw;
+    left: 40rem;
+    top: 15rem;
   }
 }
 
@@ -744,6 +786,51 @@ form {
   .shabby {
     height: 40%;
   }
+  .chad {
+    width: 40vw;
+    left: 34rem;
+    top: 15rem;
+  }
+  .box1-title {
+    font-size: 2vw;
+  }
+  .box1-subtitle {
+    font-size: 2vw;
+  }
+  .labelstyle {
+    font-size: 2vw;
+  }
+  .box2-title {
+    font-size: 2vw;
+  }
+  .transfer-sum-text {
+    font-size: 2vw;
+  }
+  .transfer-sum {
+    font-size: 2vw;
+  }
+  .transfer-cur {
+    font-size: 2vw;
+  }
+  .to {
+    font-size: 2vw;
+  }
+  #address-box {
+    font-size: 9px;
+  }
+  .box3-title {
+    font-size: 1.7vw;
+    padding: 0rem;
+    text-align: center;
+  }
+  .got-hash {
+    font-size: 1.5vw;
+    font-weight: 900;
+  }
+  .find-hash-href {
+    font-size: 1.5vw;
+    font-weight: 900;
+  }
 }
 
 @media screen and (max-width: 700px) {
@@ -774,6 +861,36 @@ form {
   .fa-hand-point-down {
     left: -5rem;
     top: 12rem;
+  }
+
+  .chad {
+    width: 70vw;
+    left: 65vw;
+  }
+  .payment-modal {
+    width: 70vw;
+    left: 15vw;
+  }
+  .payment-modal2 {
+    height: 33rem;
+  }
+  .addy-copied {
+    top: 29rem;
+  }
+  .tx-input {
+    width: 50%;
+  }
+  .email-input {
+    width: 50%;
+  }
+  .submit-form-button {
+    margin: 0;
+  }
+  form {
+    width: 120%;
+  }
+  .email-text {
+    padding: 1rem 0.3rem;
   }
 }
 
@@ -850,6 +967,20 @@ form {
     left: -3rem;
     top: 22rem;
   }
+  .payment-modal {
+    left: 15vw;
+  }
+  .payment-modal2 {
+    height: 32rem;
+  }
+  .chad {
+    width: 45vw;
+    height: 40%;
+    left: 70vw;
+  }
+  .addy-copied {
+    top: 28rem;
+  }
 }
 
 @media screen and (max-width: 450px) {
@@ -875,6 +1006,50 @@ form {
   }
   .header-text-box2 {
     margin-left: 2rem;
+  }
+  .box1-title {
+    font-size: 2.5vw;
+  }
+  .box1-subtitle {
+    font-size: 2.5vw;
+  }
+  .labelstyle {
+    font-size: 2vw;
+  }
+  .box2-title {
+    font-size: 2.2vw;
+  }
+  .transfer-sum-text {
+    font-size: 2.5vw;
+  }
+  .transfer-sum {
+    font-size: 2.5vw;
+  }
+  .transfer-sum {
+    font-size: 2.5vw;
+  }
+  .to {
+    font-size: 2.5vw;
+  }
+  .box3-title {
+    font-size: 2vw;
+  }
+  .got-hash {
+    padding: 0px 0.3rem;
+    font-size: 2.3vw;
+  }
+  .find-hash {
+    padding: 0px 0.5rem;
+    font-size: 3.7vw;
+  }
+  .tx-hash {
+    font-size: 3.5vw;
+  }
+  .email-text {
+    font-size: 3.5vw;
+  }
+  .form-box {
+    width: 80%;
   }
 }
 
