@@ -22,8 +22,8 @@ const blockchains = document.querySelector("#blockchains");
 const addressBox = document.querySelector("#address-box");
 
 //Initialize
-expectations.style.display = "none";
-instructions.style.display = "none";
+// expectations.style.display = "none";
+// instructions.style.display = "none";
 
 //Bootscreen animations
 
@@ -96,11 +96,11 @@ blockchains.addEventListener("change", () => {
       renderResult(ethereumURL, 3);
       addressBox.value = "0x2222222222";
       break;
-    case "Bnb":
+    case "BNB":
       renderResult(BNB_URL, 2);
       addressBox.value = "0x4444444444";
       break;
-    case "Avax":
+    case "AVAX":
       renderResult(AVAX_URL, 2);
       addressBox.value = "0x6666666666";
       break;
