@@ -331,8 +331,10 @@
 
 .chad {
   position: absolute;
+  top: 10vh;
+  left: 70vw;
   z-index: 1;
-  width: 100vw;
+  width: 50vw;
 }
 
 .payment-modal {
@@ -452,6 +454,7 @@
   font-family: "Press Start 2P", sans-serif;
   border-radius: 3rem;
   padding: 0.2rem 0.5rem;
+  width: 90%;
 }
 
 .to {

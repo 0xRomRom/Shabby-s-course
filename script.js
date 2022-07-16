@@ -137,14 +137,12 @@ const AVAX_URL = `https://api.coingecko.com/api/v3/simple/price?ids=avalanche-2&
 const renderResult = async function (source, optional) {
   await fetch(source)
     .then((response) => {
-      console.log(response);
       if (!response.ok) {
         throw new Error("Can not reach CoinGecko");
       }
       return response.json();
     })
     .then((data) => {
-      console.log(data[Object.keys(data)[0]].usd);
       transferSum.textContent = (
         100 / Math.trunc(data[Object.keys(data)[0]].usd)
       ).toFixed(optional);
