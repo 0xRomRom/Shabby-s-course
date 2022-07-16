@@ -21,8 +21,8 @@ const blockchains = document.querySelector("#blockchains");
 const addressBox = document.querySelector("#address-box");
 
 //Initialize
-expectations.style.display = "none";
-instructions.style.display = "none";
+// expectations.style.display = "none";
+// instructions.style.display = "none";
 
 //Bootscreen animations
 
@@ -88,27 +88,27 @@ blockchains.addEventListener("change", () => {
       // transferSum.textContent = "97";
       addressBox.value = "0x3333333333";
       break;
-    case "bitcoin":
+    case "Bitcoin":
       renderResult(bitcoinURL, 5);
       transferSum.textContent = "97";
       addressBox.value = "0x1111111111";
       break;
-    case "ethereum":
+    case "Ethereum":
       renderResult(ethereumURL, 3);
       transferSum.textContent = "97";
       addressBox.value = "0x2222222222";
       break;
-    case "bnb":
+    case "Bnb":
       renderResult(BNB_URL, 2);
       transferSum.textContent = "97";
       addressBox.value = "0x4444444444";
       break;
-    case "avax":
+    case "Avax":
       renderResult(AVAX_URL, 2);
       transferSum.textContent = "97";
       addressBox.value = "0x6666666666";
       break;
-    case "tether":
+    case "Tether":
       transferSum.textContent = "97";
       addressBox.value = "0x5555555555";
       break;
