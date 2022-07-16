@@ -84,22 +84,27 @@ blockchains.addEventListener("change", () => {
       addressBox.value = "Choose Currency";
       break;
     case "solana":
-      transferSum.textContent = "97";
+      renderResult(solanaURL);
+      // transferSum.textContent = "97";
       addressBox.value = "0x1111111111";
       break;
     case "bitcoin":
+      renderResult(bitcoinURL);
       transferSum.textContent = "97";
       addressBox.value = "0x2222222222";
       break;
     case "ethereum":
+      renderResult(ethereumURL);
       transferSum.textContent = "97";
       addressBox.value = "0x3333333333";
       break;
     case "bnb":
+      renderResult(BNB_URL);
       transferSum.textContent = "97";
       addressBox.value = "0x4444444444";
       break;
     case "avax":
+      renderResult(AVAX_URL);
       transferSum.textContent = "97";
       addressBox.value = "0x5555555555";
       break;
@@ -111,7 +116,6 @@ blockchains.addEventListener("change", () => {
       transferSum.textContent = " ";
       addressBox.value = "Choose Currency";
   }
-
   copyAddress();
   transferCurrency.textContent = blockchains.value;
 });
@@ -122,7 +126,35 @@ function copyAddress() {
   document.execCommand("copy");
 }
 
-//
+//////////////////
+
+const bitcoinURL = `https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd`;
+const solanaURL = `https://api.coingecko.com/api/v3/simple/price?ids=solana&vs_currencies=usd`;
+const ethereumURL = `https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd`;
+const BNB_URL = `https://api.coingecko.com/api/v3/simple/price?ids=binancecoin&vs_currencies=usd`;
+const AVAX_URL = `https://api.coingecko.com/api/v3/simple/price?ids=avalanche-2&vs_currencies=usd`;
+
+const renderResult = async function (source) {
+  await fetch(source)
+    .then((response) => {
+      console.log(response);
+      if (!response.ok) {
+        throw new Error("Can not reach CoinGecko");
+      }
+      return response.json();
+    })
+    .then((data) => {
+      console.log(data[Object.keys(data)[0]].usd);
+
+      transferSum.textContent = (
+        100 / Math.trunc(data[Object.keys(data)[0]].usd)
+      ).toFixed(4);
+    });
+};
+// renderResult();
+
+//////////////////
+
 setTimeout(() => {
   shabby.src = "./img/shabby.jpg";
 }, 13000);
