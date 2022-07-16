@@ -21,8 +21,8 @@ const blockchains = document.querySelector("#blockchains");
 const addressBox = document.querySelector("#address-box");
 
 //Initialize
-// expectations.style.display = "none";
-// instructions.style.display = "none";
+expectations.style.display = "none";
+instructions.style.display = "none";
 
 //Bootscreen animations
 
