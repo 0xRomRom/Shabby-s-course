@@ -416,8 +416,56 @@
 .box2 {
   position: relative;
   width: 33%;
-  /* background-color: green; */
   height: 97%;
+  border-right: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.transfer-sum-text {
+  font-family: "Press Start 2P", sans-serif;
+  font-weight: 900;
+  font-size: 1vw;
+  text-align: center;
+}
+
+.transfer-sum {
+  font-family: "Press Start 2P", sans-serif;
+  font-weight: 900;
+  font-size: 1vw;
+  text-align: center;
+}
+
+.transfer-cur {
+  font-family: "Press Start 2P", sans-serif;
+  font-weight: 900;
+  font-size: 1vw;
+  text-align: center;
+}
+
+#address-box {
+  font-family: "Press Start 2P", sans-serif;
+  border-radius: 3rem;
+  padding: 0.2rem 0.5rem;
+}
+
+.to {
+  font-family: "Press Start 2P", sans-serif;
+  font-weight: 900;
+  font-size: 1vw;
+  text-align: center;
+}
+
+.box2-title {
+  font-family: "Press Start 2P", sans-serif;
+  font-weight: 900;
+  font-size: 1.3vw;
+  text-align: center;
 }
 
 .box3 {

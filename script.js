@@ -14,7 +14,10 @@ const instructions = document.querySelector(".instructions");
 const goButton = document.querySelector(".go");
 const goText = document.querySelector(".go-text");
 const noButton = document.querySelector(".no");
-const fingerDown = document.querySelector("fa-hand-point-down");
+
+const transferSum = document.querySelector(".transfer-sum");
+const transferCurrency = document.querySelector(".transfer-cur");
+const blockchains = document.querySelector("#blockchains");
 
 //Initialize
 // expectations.style.display = "none";
@@ -73,6 +76,38 @@ noButton.addEventListener("mouseleave", () => {
   shabby.src = "./img/shabby2.jpg";
 });
 
+blockchains.addEventListener("change", () => {
+  switch (blockchains.value) {
+    case "solana":
+      transferSum.textContent = "97";
+      break;
+    case "bitcoin":
+      transferSum.textContent = "97";
+      break;
+    case "ethereum":
+      transferSum.textContent = "97";
+      break;
+    case "bnb":
+      transferSum.textContent = "97";
+      break;
+    case "avax":
+      transferSum.textContent = "97";
+      break;
+    case "tether":
+      transferSum.textContent = "97";
+      break;
+  }
+
+  copyAddress();
+  transferCurrency.textContent = blockchains.value;
+});
+
+function copyAddress() {
+  let copyText = document.getElementById("address-box");
+  copyText.select();
+  document.execCommand("copy");
+}
+
 //
 setTimeout(() => {
   shabby.src = "./img/shabby.jpg";
@@ -128,5 +163,3 @@ setTimeout(() => {
 setTimeout(() => {
   buttonBox.classList.remove("hidden");
 }, 28000);
-
-fingerDown.addEventListener("click", () => {});
