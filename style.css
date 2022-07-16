@@ -522,7 +522,7 @@
   padding: 1rem 2rem;
   font-family: "Press Start 2P", sans-serif;
   border-radius: 0.3rem;
-  width: 90%;
+  width: 100%;
 }
 
 .find-hash-href {
@@ -623,6 +623,7 @@ form {
 }
 
 .submit-form-button {
+  width: 40%;
   font-size: 1rem;
   color: rgb(0, 0, 0);
   text-align: center;
@@ -638,6 +639,13 @@ form {
 }
 
 .form-down {
+  text-decoration: none;
+  color: black;
+  width: 100%;
+  /* background-color: green; */
+
+  display: inline-block;
+  width: 90%;
   text-decoration: none;
   color: black;
 }
