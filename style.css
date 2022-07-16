@@ -452,7 +452,7 @@
 
 #address-box {
   font-family: "Press Start 2P", sans-serif;
-  border-radius: 3rem;
+  border-radius: 0.3rem;
   padding: 0.2rem 0.5rem;
   width: 90%;
 }
@@ -471,6 +471,8 @@
   font-size: 0.81rem;
   text-align: center;
   overflow: hidden;
+  position: absolute;
+  top: 31rem;
 }
 
 .addy-animate {
@@ -500,6 +502,49 @@
   width: 33%;
   /* background-color: green; */
   height: 97%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.box3-title {
+  font-family: "Press Start 2P", sans-serif;
+  font-weight: 900;
+  font-size: 1.3vw;
+  text-align: center;
+}
+
+.got-hash {
+  padding: 1rem 2rem;
+  font-family: "Press Start 2P", sans-serif;
+  border-radius: 0.3rem;
+  width: 90%;
+}
+
+.find-hash-href {
+  display: inline-block;
+  width: 100%;
+  text-decoration: none;
+  color: black;
+}
+
+.find-hash {
+  padding: 1rem 2rem;
+  font-family: "Press Start 2P", sans-serif;
+  border-radius: 0.3rem;
+  width: 90%;
+}
+.find-hash:hover {
+  cursor: pointer;
+  background-color: #696bb2;
+  color: white;
+}
+
+.got-hash:hover {
+  cursor: pointer;
+  background-color: #35aa5c;
 }
 
 @keyframes hover {
