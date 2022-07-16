@@ -464,6 +464,30 @@
   text-align: center;
 }
 
+.addy-copied {
+  color: red;
+  font-family: "Press Start 2P", sans-serif;
+  font-weight: 900;
+  font-size: 0.81rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.addy-animate {
+  animation: slideDown 3s linear forwards;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 100;
+    transform: translateY(-0.6rem);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(0.6rem);
+  }
+}
+
 .box2-title {
   font-family: "Press Start 2P", sans-serif;
   font-weight: 900;

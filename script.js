@@ -14,6 +14,7 @@ const instructions = document.querySelector(".instructions");
 const goButton = document.querySelector(".go");
 const goText = document.querySelector(".go-text");
 const noButton = document.querySelector(".no");
+const addyCopied = document.querySelector(".addy-copied");
 
 const transferSum = document.querySelector(".transfer-sum");
 const transferCurrency = document.querySelector(".transfer-cur");
@@ -83,29 +84,24 @@ blockchains.addEventListener("change", () => {
       transferSum.textContent = " ";
       addressBox.value = "Choose Currency";
       break;
-    case "solana":
+    case "Solana":
       renderResult(solanaURL, 2);
-      // transferSum.textContent = "97";
       addressBox.value = "0x3333333333";
       break;
     case "Bitcoin":
       renderResult(bitcoinURL, 5);
-      transferSum.textContent = "97";
       addressBox.value = "0x1111111111";
       break;
     case "Ethereum":
       renderResult(ethereumURL, 3);
-      transferSum.textContent = "97";
       addressBox.value = "0x2222222222";
       break;
     case "Bnb":
       renderResult(BNB_URL, 2);
-      transferSum.textContent = "97";
       addressBox.value = "0x4444444444";
       break;
     case "Avax":
       renderResult(AVAX_URL, 2);
-      transferSum.textContent = "97";
       addressBox.value = "0x6666666666";
       break;
     case "Tether":
@@ -116,7 +112,12 @@ blockchains.addEventListener("change", () => {
       transferSum.textContent = " ";
       addressBox.value = "Choose Currency";
   }
+  addyCopied.classList.remove("removed");
+  addyCopied.classList.add("addy-animate");
   copyAddress();
+  setTimeout(() => {
+    addyCopied.classList.add("removed");
+  }, 2000);
   transferCurrency.textContent = blockchains.value;
 });
 
