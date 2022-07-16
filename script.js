@@ -84,27 +84,27 @@ blockchains.addEventListener("change", () => {
       addressBox.value = "Choose Currency";
       break;
     case "solana":
-      renderResult(solanaURL);
+      renderResult(solanaURL, 2);
       // transferSum.textContent = "97";
       addressBox.value = "0x3333333333";
       break;
     case "bitcoin":
-      renderResult(bitcoinURL);
+      renderResult(bitcoinURL, 5);
       transferSum.textContent = "97";
       addressBox.value = "0x1111111111";
       break;
     case "ethereum":
-      renderResult(ethereumURL);
+      renderResult(ethereumURL, 3);
       transferSum.textContent = "97";
       addressBox.value = "0x2222222222";
       break;
     case "bnb":
-      renderResult(BNB_URL);
+      renderResult(BNB_URL, 2);
       transferSum.textContent = "97";
       addressBox.value = "0x4444444444";
       break;
     case "avax":
-      renderResult(AVAX_URL);
+      renderResult(AVAX_URL, 2);
       transferSum.textContent = "97";
       addressBox.value = "0x6666666666";
       break;
@@ -134,7 +134,7 @@ const ethereumURL = `https://api.coingecko.com/api/v3/simple/price?ids=ethereum&
 const BNB_URL = `https://api.coingecko.com/api/v3/simple/price?ids=binancecoin&vs_currencies=usd`;
 const AVAX_URL = `https://api.coingecko.com/api/v3/simple/price?ids=avalanche-2&vs_currencies=usd`;
 
-const renderResult = async function (source) {
+const renderResult = async function (source, optional) {
   await fetch(source)
     .then((response) => {
       console.log(response);
@@ -147,7 +147,7 @@ const renderResult = async function (source) {
       console.log(data[Object.keys(data)[0]].usd);
       transferSum.textContent = (
         100 / Math.trunc(data[Object.keys(data)[0]].usd)
-      ).toFixed(4);
+      ).toFixed(optional);
     });
 };
 
