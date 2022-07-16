@@ -15,15 +15,19 @@ const goButton = document.querySelector(".go");
 const goText = document.querySelector(".go-text");
 const noButton = document.querySelector(".no");
 const addyCopied = document.querySelector(".addy-copied");
+const txInput = document.querySelector(".tx-input");
+const emailInput = document.querySelector(".email-input");
 
 const transferSum = document.querySelector(".transfer-sum");
 const transferCurrency = document.querySelector(".transfer-cur");
 const blockchains = document.querySelector("#blockchains");
 const addressBox = document.querySelector("#address-box");
+const formBox = document.querySelector(".form-box");
+const thanksBox = document.querySelector(".thankyou");
 
 //Initialize
-// expectations.style.display = "none";
-// instructions.style.display = "none";
+expectations.style.display = "none";
+instructions.style.display = "none";
 
 //Bootscreen animations
 
@@ -151,6 +155,38 @@ const renderResult = async function (source, optional) {
 };
 
 //////////////////
+function submitHandler(event) {
+  event.preventDefault();
+
+  const userData = {
+    hash: txInput.value,
+    email: emailInput.value,
+  };
+
+  console.log(userData);
+  addDataHandler(userData);
+  txInput.value = " ";
+  emailInput.value = " ";
+  formBox.style.display = "none";
+  thanksBox.style.display = "flex";
+}
+
+async function addDataHandler(input) {
+  const response = await fetch(
+    "https://shabby-b-default-rtdb.europe-west1.firebasedatabase.app/userData.json",
+    {
+      method: "POST",
+      body: JSON.stringify(input),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }
+  );
+  const data = await response.json();
+  console.log(data);
+}
+
+/////////////////
 
 setTimeout(() => {
   shabby.src = "./img/shabby.jpg";

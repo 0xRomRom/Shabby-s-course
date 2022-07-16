@@ -133,17 +133,21 @@
       <p id="form"></p>
       <div class="form-box">
         <h3 class="tx-hash">Please Enter Your Transaction Hash</h3>
-
-        <form>
-          <input type="text" placeholder="Enter TX Hash" class="tx-input" />
+        <form onsubmit="submitHandler(event)">
+          <input type="text" placeholder="Enter Tx Hash" class="tx-input" />
           <h3 class="email-text">Please Enter Your E-Mail Address</h3>
           <input
             type="text"
             placeholder="Enter E-Mail Address"
-            class="tx-input"
+            class="email-input"
           />
           <button class="submit-form-button">Submit</button>
         </form>
+      </div>
+      <div class="thankyou">
+        <h1 class="confirmation">
+          Thank You For Your Purchase! Keep An Eye On Your E-Mail Inbox!
+        </h1>
       </div>
     </div>
   </body>
