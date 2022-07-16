@@ -17,8 +17,8 @@ const noButton = document.querySelector(".no");
 const fingerDown = document.querySelector("fa-hand-point-down");
 
 //Initialize
-expectations.style.display = "none";
-instructions.style.display = "none";
+// expectations.style.display = "none";
+// instructions.style.display = "none";
 
 //Bootscreen animations
 
