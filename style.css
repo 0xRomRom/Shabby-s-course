@@ -637,6 +637,17 @@ form {
   background-color: rgb(98, 169, 187);
 }
 
+.form-down {
+  text-decoration: none;
+  color: black;
+}
+
+#form {
+  visibility: hidden;
+  position: absolute;
+  top: 2rem;
+}
+
 /* Media Queries */
 @media screen and (max-width: 1500px) {
   .shabby2 {

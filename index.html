@@ -114,7 +114,9 @@
             <h1 class="box3-title">
               Step 3: <br />Find your transaction hash, and proceed below.
             </h1>
-            <button class="got-hash">✓ I Found My Tx Hash</button>
+            <button class="got-hash">
+              <a href="#form" class="form-down">✓ I Found My Tx Hash</a>
+            </button>
             <button class="find-hash">
               <a
                 class="find-hash-href"
@@ -128,13 +130,18 @@
       </div>
     </div>
     <div class="pay-form">
+      <p id="form"></p>
       <div class="form-box">
         <h3 class="tx-hash">Please Enter Your Transaction Hash</h3>
 
         <form>
           <input type="text" placeholder="Enter TX Hash" class="tx-input" />
           <h3 class="email-text">Please Enter Your E-Mail Address</h3>
-          <input type="text" placeholder="Enter TX Hash" class="tx-input" />
+          <input
+            type="text"
+            placeholder="Enter E-Mail Address"
+            class="tx-input"
+          />
           <button class="submit-form-button">Submit</button>
         </form>
       </div>
