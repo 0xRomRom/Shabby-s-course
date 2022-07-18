@@ -29,9 +29,9 @@ const txError = document.querySelector(".tx-error");
 const emailError = document.querySelector(".email-error");
 
 //Initialize
-expectations.style.display = "none";
-instructions.style.display = "none";
-payForm.style.display = "none";
+// expectations.style.display = "none";
+// instructions.style.display = "none";
+// payForm.style.display = "none";
 
 //Bootscreen animations
 
@@ -168,6 +168,19 @@ function submitHandler(event) {
   if (emailInput.value.includes("@")) {
     emailError.classList.add("hidden");
   }
+  if(txInput.value.length >= 10) {
+    txError.classList.add('hidden');
+  }
+
+  if(emailInput.value.length < 5) {
+    emailError.classList.remove("hidden");
+    if (txInput.value.length <= 10) {
+      txError.classList.remove("hidden");
+      return;
+    }
+    return;
+  }
+
   if (txInput.value.length <= 10) {
     txError.classList.remove("hidden");
     if (!emailInput.value.includes("@")) {
@@ -191,7 +204,6 @@ function submitHandler(event) {
     hash: txInput.value,
     email: emailInput.value,
   };
-
   console.log(userData);
   addDataHandler(userData);
   txInput.value = " ";

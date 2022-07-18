@@ -680,6 +680,7 @@ form {
 }
 
 .confirmation {
+  font-size: 2rem;
   color: white;
   font-family: "Press Start 2P", sans-serif;
   padding: 1rem 2rem;
@@ -697,7 +698,7 @@ form {
   color: white;
   font-family: "Press Start 2P", sans-serif;
   padding: 1rem 2rem;
-  width: 70%;
+  width: 90%;
   position: absolute;
   color: black;
   bottom: 1rem;
@@ -705,14 +706,14 @@ form {
 }
 
 .tx-error {
-  padding-top: 0.5rem;
+  padding: 1rem 2rem;
   color: red;
   text-align: center;
   font-family: "Press Start 2P", sans-serif;
 }
 
 .email-error {
-  padding-top: 0.5rem;
+  padding: 1rem 2rem;
   color: red;
   text-align: center;
   font-family: "Press Start 2P", sans-serif;
@@ -777,6 +778,19 @@ form {
   .go {
     margin: 0;
   }
+}
+
+@media screen and (max-width: 850px) {
+  .thankyou {
+    width: 90%;
+  }
+  .confirmation {
+    padding: 0;
+  }
+  .confirmation2 {
+    padding: 0;
+  }
+
 }
 
 @media screen and (max-width: 800px) {
