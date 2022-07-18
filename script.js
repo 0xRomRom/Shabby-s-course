@@ -29,9 +29,9 @@ const txError = document.querySelector(".tx-error");
 const emailError = document.querySelector(".email-error");
 
 //Initialize
-// expectations.style.display = "none";
-// instructions.style.display = "none";
-// payForm.style.display = "none";
+expectations.style.display = "none";
+instructions.style.display = "none";
+payForm.style.display = "none";
 
 //Bootscreen animations
 

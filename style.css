@@ -42,6 +42,7 @@
   position: relative;
   width: 90vw;
   max-height: 20rem;
+  z-index: 5;
 }
 
 .shabby-container {
@@ -197,7 +198,7 @@
   flex-direction: column;
   gap: 2rem;
   position: absolute;
-  z-index: 5;
+  z-index: 200;
   width: 100%;
   height: 100%;
   background: linear-gradient(#00ffa3, #03e1ff, #dc1fff, #306a9c);
@@ -321,6 +322,7 @@
   height: 63rem;
   width: 100%;
   overflow: hidden;
+
   /* border-bottom: 1px solid black; */
 }
 
@@ -394,6 +396,7 @@
   font-family: "Press Start 2P", sans-serif;
   font-weight: 900;
   font-size: 1vw;
+  text-align: center;
 }
 
 #blockchains {
@@ -845,6 +848,10 @@ form {
     font-size: 1.5vw;
     font-weight: 900;
   }
+  .payment-modal {
+    left: 2rem;
+    width: 90vw;
+  }
 }
 
 @media screen and (max-width: 700px) {
@@ -882,11 +889,11 @@ form {
     left: 65vw;
   }
   .payment-modal {
-    width: 70vw;
-    left: 15vw;
+    width: 90vw;
   }
   .payment-modal2 {
     height: 33rem;
+    /* width: 90%; */
   }
   .addy-copied {
     top: 29rem;
@@ -906,6 +913,12 @@ form {
   .email-text {
     padding: 1rem 0.3rem;
   }
+  .form-box {
+    width: 90vw;
+  }
+  .tx-hash {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -914,6 +927,9 @@ form {
   }
   .shabby {
     height: 30%;
+  }
+  .header-text-box2 {
+    margin-left: 2rem;
   }
 }
 
@@ -981,9 +997,9 @@ form {
     left: -3rem;
     top: 22rem;
   }
-  .payment-modal {
+  /* .payment-modal {
     left: 15vw;
-  }
+  } */
   .payment-modal2 {
     height: 32rem;
   }
