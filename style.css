@@ -12,8 +12,6 @@
   position: absolute;
   overflow: hidden;
   height: 62rem;
-  /* padding: 0px 0.5rem; */
-  border-bottom: 2px dashed black;
 }
 .hidden {
   visibility: hidden;
@@ -43,6 +41,7 @@
   position: relative;
   width: 90vw;
   max-height: 20rem;
+  z-index: 5;
 }
 
 .shabby-container {
@@ -198,7 +197,7 @@
   flex-direction: column;
   gap: 2rem;
   position: absolute;
-  z-index: 5;
+  z-index: 200;
   width: 100%;
   height: 100%;
   background: linear-gradient(#00ffa3, #03e1ff, #dc1fff, #306a9c);
@@ -253,8 +252,6 @@
   height: 63rem;
   align-items: center;
   overflow: hidden;
-  border-top: 2px dashed black;
-  border-bottom: 2px dashed black;
 }
 
 .header-text-box2 {
@@ -325,6 +322,7 @@
   height: 63rem;
   width: 100%;
   overflow: hidden;
+
   /* border-bottom: 1px solid black; */
 }
 
@@ -398,6 +396,7 @@
   font-family: "Press Start 2P", sans-serif;
   font-weight: 900;
   font-size: 1vw;
+  text-align: center;
 }
 
 #blockchains {
@@ -573,6 +572,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  gap: 10rem;
   overflow: hidden;
   background: linear-gradient(white, gray);
 }
@@ -684,6 +685,7 @@ form {
 }
 
 .confirmation {
+  font-size: 2rem;
   color: white;
   font-family: "Press Start 2P", sans-serif;
   padding: 1rem 2rem;
@@ -701,7 +703,11 @@ form {
   color: white;
   font-family: "Press Start 2P", sans-serif;
   padding: 1rem 2rem;
+<<<<<<< HEAD
   width: 120%;
+=======
+  width: 90%;
+>>>>>>> 19870d940eb84f71b9b88d3cf0bdc54fa59c2a1c
   position: absolute;
   color: black;
   bottom: 1rem;
@@ -721,14 +727,14 @@ form {
 }
 
 .tx-error {
-  padding-top: 0.5rem;
+  padding: 1rem 2rem;
   color: red;
   text-align: center;
   font-family: "Press Start 2P", sans-serif;
 }
 
 .email-error {
-  padding-top: 0.5rem;
+  padding: 1rem 2rem;
   color: red;
   text-align: center;
   font-family: "Press Start 2P", sans-serif;
@@ -803,6 +809,19 @@ form {
   }
 }
 
+@media screen and (max-width: 850px) {
+  .thankyou {
+    width: 90%;
+  }
+  .confirmation {
+    padding: 0;
+  }
+  .confirmation2 {
+    padding: 0;
+  }
+
+}
+
 @media screen and (max-width: 800px) {
   .loadingtext {
     font-size: 3vw;
@@ -855,6 +874,10 @@ form {
     font-size: 1.5vw;
     font-weight: 900;
   }
+  .payment-modal {
+    left: 2rem;
+    width: 90vw;
+  }
 }
 
 @media screen and (max-width: 700px) {
@@ -895,10 +918,14 @@ form {
   }
   .payment-modal {
     width: 90vw;
+<<<<<<< HEAD
     left: 5%;
+=======
+>>>>>>> 19870d940eb84f71b9b88d3cf0bdc54fa59c2a1c
   }
   .payment-modal2 {
     height: 33rem;
+    /* width: 90%; */
   }
   .addy-copied {
     top: 29rem;
@@ -918,6 +945,12 @@ form {
   .email-text {
     padding: 1rem 0.3rem;
   }
+  .form-box {
+    width: 90vw;
+  }
+  .tx-hash {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -927,6 +960,7 @@ form {
   .shabby {
     height: 30%;
   }
+<<<<<<< HEAD
   .form-box {
     width: 90vw;
   }
@@ -943,6 +977,10 @@ form {
   }
   .email-input {
     min-width: 90%;
+=======
+  .header-text-box2 {
+    margin-left: 2rem;
+>>>>>>> 19870d940eb84f71b9b88d3cf0bdc54fa59c2a1c
   }
 }
 
@@ -1007,9 +1045,17 @@ form {
   }
   .fa-hand-point-down {
     left: -3rem;
+<<<<<<< HEAD
     top: 17rem;
   }
 
+=======
+    top: 22rem;
+  }
+  /* .payment-modal {
+    left: 15vw;
+  } */
+>>>>>>> 19870d940eb84f71b9b88d3cf0bdc54fa59c2a1c
   .payment-modal2 {
     height: 32rem;
   }
