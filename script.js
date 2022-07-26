@@ -33,20 +33,6 @@ expectations.style.display = "none";
 instructions.style.display = "none";
 payForm.style.display = "none";
 
-const findOverflows = () => {
-  const documentWidth = document.documentElement.offsetWidth;
-
-  document.querySelectorAll("*").forEach((element) => {
-    const box = element.getBoundingClientRect();
-
-    if (box.left < 0 || box.right > documentWidth) {
-      console.log(element);
-      element.style.border = "1px solid red";
-    }
-  });
-};
-findOverflows();
-
 //Bootscreen animations
 
 const initialFunction = () => {
