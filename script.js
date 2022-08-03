@@ -98,27 +98,19 @@ blockchains.addEventListener("change", () => {
       break;
     case "Solana":
       renderResult(solanaURL, 2);
-      addressBox.value = "0x3333333333";
+      addressBox.value = "A5YPUy8LcPtHUSS1rnTueX6atLvVdZsnrF6sJ9GNz1sv";
       break;
     case "Bitcoin":
       renderResult(bitcoinURL, 5);
-      addressBox.value = "0x1111111111";
+      addressBox.value = "3Ji2rY9qya4bZvxCPyLyKNJ25ZGEc8LegG";
       break;
     case "Ethereum":
       renderResult(ethereumURL, 3);
-      addressBox.value = "0x2222222222";
+      addressBox.value = "0xaE7B10a8B411c8981c43D6fE26a0Af369515eA10";
       break;
-    case "BNB":
-      renderResult(BNB_URL, 2);
-      addressBox.value = "0x4444444444";
-      break;
-    case "AVAX":
-      renderResult(AVAX_URL, 2);
-      addressBox.value = "0x6666666666";
-      break;
-    case "Tether":
+    case "USDC":
       transferSum.textContent = "97";
-      addressBox.value = "0x5555555555";
+      addressBox.value = "0xDF4f481Ecbf903B488D25925c819b52b9b8fF0E1";
       break;
     default:
       transferSum.textContent = " ";
@@ -144,8 +136,6 @@ function copyAddress() {
 const bitcoinURL = `https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd`;
 const solanaURL = `https://api.coingecko.com/api/v3/simple/price?ids=solana&vs_currencies=usd`;
 const ethereumURL = `https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd`;
-const BNB_URL = `https://api.coingecko.com/api/v3/simple/price?ids=binancecoin&vs_currencies=usd`;
-const AVAX_URL = `https://api.coingecko.com/api/v3/simple/price?ids=avalanche-2&vs_currencies=usd`;
 
 const renderResult = async function (source, optional) {
   await fetch(source)
